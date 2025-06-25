@@ -23,7 +23,7 @@ document.getElementById('formNoticia').addEventListener('submit', async function
   const texto = document.getElementById('texto').value;
 
   try {
-    const response = await fetch('http://localhost:3000/api/noticias', {
+    const response = await fetch('https://seu-backend.up.railway.app/api/noticias', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ async function carregarNoticias() {
   listaNoticias.innerHTML = '';
 
   try {
-    const res = await fetch('http://localhost:3000/api/noticias');
+    const res = await fetch('https://seu-backend.up.railway.app/api/noticias');
     const noticias = await res.json();
 
     noticias.forEach(noticia => {
